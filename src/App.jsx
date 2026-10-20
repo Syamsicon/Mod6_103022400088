@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import KartuMenu from './components/kartuMenu'
 
 const nama = 'Sam'
 const N = 88
 const gayaJudul = {color: '#1F3A5F', fontsize: '20px'}
 
+const harga = 10.000
+const namaMakanan = 'ayam geprek'
+const kategori = 'Makanan'
 function App() {
   const jam = 9
   return (<>
@@ -18,10 +19,13 @@ function App() {
     <button disabled> bayar </button>
     
 
+
+    <h2 className='Menu' style={gayaJudul}>Menu Hari ini</h2>
+    <p>{kartuNama(namaMakanan, harga, kategori)}</p>
   </>)
-  
-  
 }
+
+
 
 
 export default App
